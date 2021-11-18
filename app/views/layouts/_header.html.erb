@@ -1,0 +1,14 @@
+<header class="flex justify-between p-8 bg-gray-400 drop-shadow-lg">
+  <div>
+    <h1>Url Shortner</h1>
+  </div>
+
+  <% if @current_user %>
+    <%= link_to 'Create', '/links/new', class: "bg-red-500 px-2 rounded" %>
+    <p class="mx-2"><%= @current_user.name %></p>
+    <%= link_to 'Log Out', '/logout', method: :delete %>
+  <% else %>
+    <a class="bg-blue-500 px-2 rounded" href="/sign_in">Sign In</a>
+    <a class="bg-blue-500 px-2 rounded" href="/sign_up">Sign Up</a>
+  <% end %>
+</header>

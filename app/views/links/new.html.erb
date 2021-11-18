@@ -1,0 +1,9 @@
+<div>
+  <h3>Create A Link</h3>
+
+  <%= form_with model: @link, url: '/links', method: :post do |f| %>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <%= f.submit 'Create Link' %>
+    <% end %>
+</div>
